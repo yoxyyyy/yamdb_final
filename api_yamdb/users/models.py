@@ -43,10 +43,7 @@ class User(AbstractUser):
 
     @property
     def is_admin(self):
-        if self.role == self.USER_ROLE_ADMIN:
-            return True
-        else:
-            return False
+        return self.role == self.USER_ROLE_ADMIN
 
     class Meta:
         ordering = ['id']
