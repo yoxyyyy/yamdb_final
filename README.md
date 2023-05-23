@@ -10,8 +10,13 @@
 - автоматический деплой на боевой сервер при пуше в главную ветку main.
 
 Стек:
-- Django 4.1.1
-- DRF 3.14.0
-- djangorestframework-simplejwt 5.2.1
-- psycopg2-binary 2.9.3
-- PyJWT 2.5.0
+- Django 3.2
+- django-extensions==3.2.1
+- djangorestframework-simplejwt==5.2.2
+- psycopg2-binary==2.9.5
+- PyJWT==1.7.1
+
+
+http://84.252.143.165
+
+https://github.com/yoxyyyy/yamdb_final
