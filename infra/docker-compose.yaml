@@ -14,7 +14,7 @@ services:
     command: sh -c "cd api_yamdb/ &&
                 gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - static_value:/app/static/
+      - static_value:/app/api_yamdb/static/
       - media_value:/app/media/
     depends_on:
       - db
