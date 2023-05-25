@@ -11,6 +11,8 @@ services:
     # build: ../api_yamdb/
     image: yoxyyyy/yamdb_final:latest
     restart: always
+    command: sh -c "cd api_yamdb/ &&
+                gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
