@@ -64,6 +64,9 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d
+            docker exec \
+              -t $(docker-compose -f docker-compose.yaml ps -q web) \
+              sh -c 'python3 api_yamdb/manage.py collectstatic --no-input'
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
